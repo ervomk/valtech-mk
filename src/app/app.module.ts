@@ -16,7 +16,7 @@ import {SearchPipe} from '../pipes/search/search.pipe';
 import {VltUserSearchboxComponent} from './vlt-user-searchbox/vlt-user-searchbox.component';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {SortPipe} from "../pipes/sort/sort.pipe";
-import {VltBtnGenericComponent} from './shared/vlt-btn-generic/vlt-btn-generic.component';
+import {VltBtnComponent} from './shared/vlt-btn/vlt-btn.component';
 import {VltTeasersComponent} from './vlt-teasers/vlt-teasers.component';
 import {VltSingleTeaserComponent} from './vlt-single-teaser/vlt-single-teaser.component';
 import {VltContactFormComponent} from './vlt-contact-form/vlt-contact-form.component';
@@ -43,7 +43,7 @@ import { VltBoxParallaxDirective } from '../directives/box-parallax/vlt-box-para
     SearchPipe,
     VltUserSearchboxComponent,
     SortPipe,
-    VltBtnGenericComponent,
+    VltBtnComponent,
     VltTeasersComponent,
     VltSingleTeaserComponent,
     VltContactFormComponent,
