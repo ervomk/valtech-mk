@@ -19,7 +19,8 @@
   &__btn-submit {
     background: var(--color-blue);
     color: var(--color-black);
-    font-size: 12px;
+    font-size: var(--btn-search-input-font-size);
+    line-height: calc(var(--btn-search-input-font-size) + 5px);
     border: 0;
     width: 70px;
   }
