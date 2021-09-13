@@ -1,0 +1,28 @@
+<div class="container">
+  <div class="vlt-contact-form">
+    <h3>CONTACT US</h3>
+
+    <form class="vlt-contact-form__inputs" *ngIf="contactForm" [formGroup]="contactForm" (ngSubmit)="submitForm()">
+      <div class="vlt-contact-form__inputs__single-input">
+        <vlt-input formControlName="firstName" [id]="'input-firstName'" [type]="inputTypeEnum.TEXT" [label]="'First Name'"></vlt-input>
+      </div>
+      <div class="vlt-contact-form__inputs__single-input">
+        <vlt-input formControlName="lastName" [id]="'input-lastName'" [type]="inputTypeEnum.TEXT" [label]="'Last Name'"></vlt-input>
+      </div>
+      <div class="vlt-contact-form__inputs__single-input">
+        <vlt-input formControlName="email" [id]="'input-emailadrs'" [type]="inputTypeEnum.EMAIL" [label]="'Email Address'"></vlt-input>
+      </div>
+      <div class="vlt-contact-form__inputs__single-input">
+        <vlt-input formControlName="phone" [id]="'input-telephone'" [type]="inputTypeEnum.NUMBER" [label]="'Phone Number'"></vlt-input>
+      </div>
+      <div class="vlt-contact-form__inputs__single-input">
+        <vlt-input formControlName="description" [id]="'input-yourmessage'" [type]="inputTypeEnum.TEXTAREA" [label]="'Your Message'"></vlt-input>
+      </div>
+      <div class="vlt-contact-form__inputs__single-input vlt-contact-form__inputs__single-input--submit-btn">
+        <vlt-btn-generic type="submit">
+          Submit
+        </vlt-btn-generic>
+      </div>
+    </form>
+  </div>
+</div>

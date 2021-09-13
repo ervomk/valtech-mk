@@ -1,0 +1,52 @@
+.vlt-single-user {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 10px 20px;
+  cursor: pointer;
+
+  &__left {
+    &__image {
+      display: block;
+      border-radius: 50%;
+      overflow: hidden;
+      object-fit: cover;
+      width: 70px;
+    }
+  }
+
+  &__right {
+    margin-left: 10px;
+
+    &__details {
+      font-size: 15px;
+      line-height: 20px;
+      font-weight: 300;
+    }
+  }
+
+  &__bottom {
+    flex-basis: 100%;
+    max-height: 0;
+    overflow: auto;
+    opacity: 0;
+    background: var(--color-single-user-additional-text-box-background);
+    transform: translateY(30px);
+    transition: all 0.3s;
+
+    &--active {
+      opacity: 1;
+      max-height: 1000px;
+      padding: 10px;
+      margin: 20px 0 0 0;
+      transform: translateY(0);
+    }
+
+    &__additional-text {
+      font-size: 16px;
+      line-height: 23px;
+      font-weight: 700;
+      margin: 0 0 10px 0;
+    }
+  }
+}

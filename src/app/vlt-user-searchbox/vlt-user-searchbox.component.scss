@@ -1,0 +1,34 @@
+.vlt-user-searchbox {
+  max-width: 520px;
+  margin: auto;
+
+  &__container {
+    position: relative;
+
+    &__input {
+      background: white;
+      border: 1px solid #707070;
+      border-radius: var(--border-radius-general);
+      display: block;
+      width: 100%;
+      padding: 24px 175px 24px 15px;
+    }
+
+    &__btn-sort {
+      position: absolute;
+      top: 0;
+      right: 10px;
+      bottom: 0;
+      margin: auto;
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &__text-tip {
+    font-size: 13px;
+    line-height: 18px;
+    font-weight: 300;
+    margin-top: 5px;
+  }
+}

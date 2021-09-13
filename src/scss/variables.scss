@@ -1,0 +1,28 @@
+@import "mixins";
+
+:root {
+  --font-family: 'Roboto', sans-serif;
+  --h2-font-size: 42px;
+  --h2-line-height: 48px;
+  --h3-font-size: 32px;
+  --h3-line-height: 38px;
+  --container-max-width: 1400px;
+  --color-black: #221F1F;
+  --color-white: #fff;
+  --color-silver: #707070;
+  --color-black-hover: #00000033;
+  --color-blue: #00E0FF;
+  --max-width-mobile: 600px;
+  --blur-behind: saturate(180%) blur(20px);
+  --btn-font-size: 14px;
+  --btn-contact-font-size: 22px;
+  --btn-contact-background-shadow: #00000033;
+  --input-font-size: 18px;
+  --border-radius-general: 15px;
+  --color-single-user-additional-text-box-background: #e4e4e4;
+
+  @include media-query-mobile {
+    --h2-font-size: 30px;
+    --h2-line-height: 35px;
+  }
+}

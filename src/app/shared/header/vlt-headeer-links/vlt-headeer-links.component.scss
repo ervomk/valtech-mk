@@ -1,0 +1,47 @@
+@import "/src/scss/mixins";
+
+.vlt-headeer-links {
+  display: flex;
+
+  @include media-query-tablet {
+    flex-direction: column;
+  }
+
+  &__link {
+    font-size: 18px;
+    line-height: 23px;
+    color: var(--color-silver);
+    text-decoration: none;
+    display: block;
+    padding: 20px 10px;
+    transition: all 0.3s;
+    position: relative;
+
+    &:after {
+      content: "";
+      display: block;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      width: 40px;
+      background: var(--color-blue);
+      margin: auto;
+      transition: all 0.3s;
+      transform: scaleX(0);
+
+      @include media-query-tablet {
+        transform: scaleX(1);
+      }
+    }
+
+    &:hover {
+      color: var(--color-blue);
+
+      &:after {
+        transform: scaleX(1);
+      }
+    }
+  }
+}

@@ -1,0 +1,9 @@
+<section class="vlt-single-section"
+         [attr.style]="imagePath ? 'background-image: url(' + imagePath + ');' : solidColor ? 'background-color:' + solidColor + ';' : null"
+>
+  <div class=" container">
+    <h2 [style.color]="titleColor">{{title}}</h2>
+  </div>
+
+  <ng-content></ng-content>
+</section>

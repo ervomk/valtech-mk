@@ -1,0 +1,14 @@
+@import "../../scss/mixins";
+
+.vlt-teasers {
+  &__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 60px 150px;
+
+    @include media-query-tablet {
+      grid-template-columns: 1fr;
+      place-items: center;
+    }
+  }
+}

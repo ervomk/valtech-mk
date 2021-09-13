@@ -1,0 +1,27 @@
+@import "../../scss/mixins";
+
+.vlt-contact-form {
+  border-radius: var(--border-radius-general);
+  padding: 45px;
+  background: rgb(255 255 255 / 78%);
+  backdrop-filter: var(--blur-behind);
+  max-width: 812px;
+  margin: auto;
+
+  &__inputs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 30px 130px;
+    align-items: end;
+
+    @include media-query-mobile {
+      grid-template-columns: 1fr;
+    }
+
+    &__single-input {
+      &--submit-btn {
+        justify-self: end;
+      }
+    }
+  }
+}

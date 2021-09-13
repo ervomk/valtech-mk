@@ -1,0 +1,16 @@
+<div class="vlt-user-searchbox">
+  <div class="vlt-user-searchbox__container">
+    <input type="text" [(ngModel)]="currentSearchInput" (input)="updateSearchInput()"
+           class="vlt-user-searchbox__container__input"
+           placeholder="Search by First Name">
+    <div class="vlt-user-searchbox__container__btn-sort">
+      <vlt-btn-generic (click)="toggleUserSorting('age')">
+        Toggle Sort by Age
+      </vlt-btn-generic>
+    </div>
+  </div>
+  <p class="vlt-user-searchbox__text-tip"><strong>Pro tip:</strong> Just write, results will be automatically shown
+    without any additional user action.</p>
+  <p class="vlt-user-searchbox__text-tip">Result count: <strong>{{(vltMiniStoreService.userListMock$.getValue() | search:vltMiniStoreService.userStringSearch$.getValue()).length}}</strong></p>
+  <p class="vlt-user-searchbox__text-tip">If 0 No results, but no need for ngIf, eh? :D</p>
+</div>

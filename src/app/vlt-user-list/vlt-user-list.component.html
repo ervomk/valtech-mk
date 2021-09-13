@@ -1,0 +1,4 @@
+<div class="vlt-user-list">
+  <vlt-single-user [user]="user" *ngFor="let user of vltMiniStoreService.userListMock$.getValue()
+  | search:vltMiniStoreService.userStringSearch$.getValue() | sort:vltMiniStoreService.userSortByKey$.getValue()"></vlt-single-user>
+</div>

@@ -1,0 +1,15 @@
+.vlt-btn-generic {
+  background: var(--color-black);
+  color: var(--color-white);
+  border-radius: 10px;
+  font-size: var(--btn-font-size);
+  line-height: calc(var(--btn-font-size) + 5px);
+  padding: 9px 14px;
+  min-width: 150px;
+  transition: all 0.3s;
+
+  &:hover {
+    background: var(--color-black-hover);
+    color: var(--color-black);
+  }
+}

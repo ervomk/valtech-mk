@@ -1,0 +1,62 @@
+@import "/src/scss/mixins";
+
+:host {
+  display: none;
+
+  @include media-query-tablet {
+    display: block;
+  }
+}
+
+.vlt-hamburger-toggle {
+  display: block;
+  width: 30px;
+  height: 20px;
+  position: absolute;
+  bottom: 0;
+  right: 10px;
+  top: 0;
+  z-index: 101;
+  margin: auto;
+  cursor: pointer;
+
+  &:after,
+  &:before,
+  & span:after {
+    content: "";
+    display: block;
+    height: 2px;
+    background: var(--color-black);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    transform: translate3d(0, -10px, 0);
+    transition: all 0.3s;
+  }
+
+  & span:after {
+    transform: translate3d(0, 0, 0);
+  }
+
+  &:before {
+    transform: translate3d(0, 10px, 0);
+  }
+
+  &--active {
+    & span:after {
+      opacity: 0;
+    }
+
+    &:after,
+    &:before {
+      transform: translate3d(0, 0, 0) rotate(45deg);
+    }
+
+    &:before {
+      transform: translate3d(0, 0, 0) rotate(-45deg);
+    }
+  }
+}

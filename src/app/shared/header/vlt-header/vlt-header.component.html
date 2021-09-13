@@ -1,0 +1,18 @@
+<header class="vlt-header container">
+  <div class="vlt-header__left">
+    <app-vlt-logo></app-vlt-logo>
+  </div>
+  <div class="vlt-header__responsive-container"
+  [class.vlt-header__responsive-container--active]="vltMiniStoreService.navigationVisible$.getValue()">
+    <div class="vlt-header__responsive-container__middle">
+      <app-vlt-headeer-links></app-vlt-headeer-links>
+    </div>
+    <div class="vlt-header__responsive-container__right">
+      <vlt-search-input></vlt-search-input>
+    </div>
+
+    <div class="vlt-header__responsive-container__mobile-overlay"></div>
+  </div>
+
+  <vlt-hamburger-toggle></vlt-hamburger-toggle>
+</header>

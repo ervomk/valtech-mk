@@ -1,0 +1,14 @@
+<div class="vlt-single-user" (click)="toggleAdditionalInformationBar()">
+  <div class="vlt-single-user__left">
+    <img class="vlt-single-user__left__image" [src]="user.img" alt="">
+  </div>
+  <div class="vlt-single-user__right">
+    <p class="vlt-single-user__right__details">{{user.firstname}} {{user.lastname}}, {{user.age}} years old.</p>
+  </div>
+
+  <div class="vlt-single-user__bottom"
+       [class.vlt-single-user__bottom--active]="showAdditionalInformation">
+    <p class="vlt-single-user__bottom__additional-text">Additional Description:</p>
+    <p>{{user.description}}</p>
+  </div>
+</div>
