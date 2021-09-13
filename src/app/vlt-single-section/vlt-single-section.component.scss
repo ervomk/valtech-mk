@@ -1,3 +1,5 @@
+@import "/src/scss/mixins";
+
 .vlt-single-section {
   min-height: 800px;
   background-repeat: no-repeat;
@@ -5,7 +7,7 @@
   background-size: cover;
   padding: 150px 0 80px 0;
 
-  @media only screen and (max-width: 600px) {
+  @include media-query-mobile {
     padding: 50px 0;
     min-height: auto;
   }
