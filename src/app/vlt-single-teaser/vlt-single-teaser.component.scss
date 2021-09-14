@@ -26,6 +26,7 @@
     border-radius: var(--border-radius-general) var(--border-radius-general) 0 0;
     height: 240px;
     overflow: hidden;
+    transform: translateZ(0); // mostly fix for Safari because of perspective animation/property.
 
     &__img {
       display: block;
