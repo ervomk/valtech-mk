@@ -10,6 +10,10 @@
   padding: 0 10px;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 body, input {
   font-family: var(--font-family);
 }
