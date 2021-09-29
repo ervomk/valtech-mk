@@ -1,7 +1,8 @@
-import {Injectable} from '@angular/core';
+import {Inject, Injectable, Renderer2, RendererFactory2} from '@angular/core';
 import {BehaviorSubject} from "rxjs";
 import {UserlistInterface} from "../../interfaces/userlist.interface";
 import {mockUsers} from "../../mocks/mock-data";
+import {DOCUMENT} from "@angular/common";
 
 @Injectable({
   providedIn: 'root'
@@ -16,8 +17,11 @@ export class VltMiniStoreService {
   private vltMiniStoreConstants = {
     CLASS_HELPER_DISABLE_SCROLL: 'helper-disable-scroll'
   }
+  private renderer: Renderer2;
 
-  constructor() {
+  constructor(rendererFactory: RendererFactory2,
+              @Inject(DOCUMENT) private document: Document) {
+    this.renderer = rendererFactory.createRenderer(null, null);
   }
 
   /**
@@ -44,9 +48,9 @@ export class VltMiniStoreService {
     this.navigationVisible$.next(forceValue === undefined ? !this.navigationVisible$.getValue() : forceValue);
 
     if (this.navigationVisible$.getValue()) {
-      document.body.classList.add(this.vltMiniStoreConstants.CLASS_HELPER_DISABLE_SCROLL);
+      this.renderer.addClass(this.document.body, this.vltMiniStoreConstants.CLASS_HELPER_DISABLE_SCROLL);
     } else {
-      document.body.classList.remove(this.vltMiniStoreConstants.CLASS_HELPER_DISABLE_SCROLL);
+      this.renderer.removeClass(this.document.body, this.vltMiniStoreConstants.CLASS_HELPER_DISABLE_SCROLL);
     }
   }
 }
